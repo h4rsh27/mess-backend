@@ -1,0 +1,24 @@
+{
+  "properties": [
+    {
+      "name": "app.jwt.secret",
+      "type": "java.lang.String",
+      "description": "Secret key for JWT token generation."
+    },
+    {
+      "name": "app.jwt.expiration",
+      "type": "java.lang.Long",
+      "description": "Expiration time for JWT tokens in milliseconds."
+    },
+    {
+      "name": "app.mail.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable or disable sending actual emails."
+    },
+    {
+      "name": "app.mail.from",
+      "type": "java.lang.String",
+      "description": "The from address for system emails."
+    }
+  ]
+}
