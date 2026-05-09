@@ -3,22 +3,53 @@
     {
       "name": "app.jwt.secret",
       "type": "java.lang.String",
-      "description": "Secret key for JWT token generation."
+      "description": "Secret key for JWT token signing and validation."
     },
     {
       "name": "app.jwt.expiration",
       "type": "java.lang.Long",
-      "description": "Expiration time for JWT tokens in milliseconds."
+      "description": "JWT token expiration time in milliseconds. Default: 86400000 (24 h)."
     },
     {
       "name": "app.mail.enabled",
       "type": "java.lang.Boolean",
-      "description": "Enable or disable sending actual emails."
+      "description": "Set to true to enable outgoing email notifications."
     },
     {
       "name": "app.mail.from",
       "type": "java.lang.String",
-      "description": "The from address for system emails."
+      "description": "From address used in all system-generated emails."
+    },
+    {
+      "name": "app.qr.secret",
+      "type": "java.lang.String",
+      "description": "HMAC secret used to sign and verify rotating QR code tokens."
+    },
+    {
+      "name": "app.qr.refresh-minutes",
+      "type": "java.lang.Integer",
+      "description": "How often (in minutes) the QR code token rotates. Default: 2."
+    },
+    {
+      "name": "app.meal.cutoff-minutes",
+      "type": "java.lang.Integer",
+      "description": "Minutes before a meal when bookings are no longer accepted. Default: 120."
+    },
+    {
+      "name": "app.meal.grace-minutes",
+      "type": "java.lang.Integer",
+      "description": "Minutes after a meal start when attendance can still be marked. Default: 20."
+    },
+    {
+      "name": "app.wallet.low-balance-threshold",
+      "type": "java.lang.Integer",
+      "description": "Wallet balance in rupees below which a low-balance notification fires. Default: 300."
+    },
+    {
+      "name": "app.cors.allowed-origins",
+      "type": "java.lang.String",
+      "description": "Comma-separated list of allowed CORS origins. Use * to allow all (default). In production set to your exact Vercel URL."
     }
   ]
 }
+
